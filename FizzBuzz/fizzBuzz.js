@@ -22,4 +22,4 @@ nums.forEach(num => {
     }
 });
 
-//The End.
+//Fin.
