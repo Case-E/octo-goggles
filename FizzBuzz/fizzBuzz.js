@@ -1,5 +1,5 @@
 //initializing the array with the number 1
-var nums = [1];
+let nums = [1];
 
 //Adding numbers until 100
 while (nums.length < 101) {
