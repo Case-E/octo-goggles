@@ -1,5 +1,4 @@
 module Main where
-
 import Data.Char (toUpper)
 
 main :: IO ()
@@ -43,9 +42,10 @@ doubleList finList strtList =
 doubleListext :: [Int] -> [Int]
 doubleListext lst = doubleList [] lst
 
+-- Fuction signatures define number and type of variables with the return type
 capMeUp :: String -> String -> String
 capMeUp cstr str =
     if (str == [])
         then cstr
-        -- else capMeUp (cstr ++ [toUpper (head str)]) (tail str)
-        else capMeUp cstr ++ [toUpper (head str)] (tail str)
+        else capMeUp (cstr ++ [toUpper (head str)]) (tail str)
+        -- else capMeUp cstr ++ [toUpper (head str)] (tail str)
