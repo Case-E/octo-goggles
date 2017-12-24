@@ -49,3 +49,29 @@ capMeUp cstr str =
         then cstr
         else capMeUp (cstr ++ [toUpper (head str)]) (tail str)
         -- else capMeUp cstr ++ [toUpper (head str)] (tail str)
+
+-- Check if a character exists in a given string. 
+chkChar :: Char -> String -> Bool
+chkChar chkC chkStr =
+    if chkStr == []
+        then False
+        else if chkC == (head chkStr)
+            then True
+            else chkChar chkC (tail chkStr)
+
+-- (Case insensitve) Check if a character exists in a given string. 
+chkCharI :: Char -> String -> Bool
+chkCharI chkC chkStr =
+    if chkStr == []
+        then False
+        else if toUpper chkC == toUpper (head chkStr)
+            then True
+            else chkCharI chkC (tail chkStr)
+
+chkAllCharI :: String -> String -> Bool
+chkAllCharI chkStr inStr = 
+    if chkStr == []
+        then True
+        else if chkCharI (head chkStr) inStr
+            then chkAllCharI (tail chkStr) inStr
+            else False
