@@ -75,3 +75,15 @@ chkAllCharI chkStr inStr =
         else if chkCharI (head chkStr) inStr
             then chkAllCharI (tail chkStr) inStr
             else False
+
+-- List of even numbers till N
+evenLstInt :: Int -> [Int] -> [Int]
+evenLstInt n lst =
+    if n == 0
+        then lst
+        else if (mod n 2) == 0
+            then evenLstInt (n-1) (n:lst)
+            else evenLstInt (n-1) lst
+
+evenLst :: Int -> [Int]
+evenLst n = evenLstInt n []
