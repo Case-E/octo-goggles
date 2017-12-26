@@ -87,21 +87,3 @@ evenLstInt n lst =
 
 evenLst :: Int -> [Int]
 evenLst n = evenLstInt n []
-
--- Leap Year
-isLeapYear :: Int -> Bool
-isLeapYear yr =
-    if (mod yr 4) == 0
-        then if (mod yr 400) == 0 && (mod yr 100) == 0
-            then True
-            else if (mod yr 100) == 0
-                then False
-            else True
-        else False
-
--- List of even numbers till N
-evenListTillInt :: Int -> [Int] -> [Int]
-evenListTillInt n lst =
-    if (length lst == n)
-        then lst
-        else [0]
