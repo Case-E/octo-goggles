@@ -98,3 +98,10 @@ isLeapYear yr =
                 then False
             else True
         else False
+
+-- List of even numbers till N
+evenListTillInt :: Int -> [Int] -> [Int]
+evenListTillInt n lst =
+    if (length lst == n)
+        then lst
+        else [0]
