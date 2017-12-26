@@ -25,6 +25,8 @@ multT5 :: Int -> Int -> Int
 multT5 n total =
     if (n == 0)
         then total
+        -- Not so easy to read code below - implementation of n-1 is very convoluted. 
         else if (mod (n-1) 3) == 0 || (mod (n-1) 5) == 0
             then multT5 (n-1) (total + (n-1))
             else multT5 (n-1) total
+
